@@ -3,7 +3,7 @@ var app = express();
 
 //your routes here
 app.get('/', function (req, res) {
-    res.sendFile("index.html");
+    res.sendFile("/index.html");
 });
 
 app.listen(8080, function () {
