@@ -1,5 +1,5 @@
 {
-  "name": "hasura-express-example",
+  "name": "quickstart-docker-express-example",
   "version": "1.0.0",
   "description": "Demo to show git push build and deploy",
   "scripts": {
@@ -8,7 +8,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.14.0",
-    "node-fetch": "^1.6.3"
+    "express": "^4.14.0"
   }
 }
