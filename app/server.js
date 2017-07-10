@@ -1,12 +1,12 @@
 var express = require('express');
 var app = express();
 var root = process.cwd();
-var favicon = require('serve-favicon');
-var path = require('path');
+//var favicon = require('serve-favicon');
+//var path = require('path');
 
 
 app.use(express.static('html'));
-app.use(favicon(path.join(__dirname, 'html', 'images', 'favicon.ico')));
+//app.use(favicon(path.join(__dirname, 'html', 'images', 'favicon.ico')));
 
 
 //your routes here
