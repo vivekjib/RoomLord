@@ -3,7 +3,7 @@
     
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>RoomLord | Sign Up</title>
+    <title>RoomLord | Login</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <!--     Fonts and icons     -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -13,9 +13,8 @@
     <link href="../Carousel Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
     <link href="../Carousel Template for Bootstrap_files/material-kit.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../Carousel Template for Bootstrap_files/styles.css">
-    <!--tostr file -->
+    
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
-
 <body class="signup-page" data-gr-c-s-loaded="true">
     <nav class="navbar navbar-transparent navbar-absolute">
         <div class="container">
@@ -37,37 +36,31 @@
                         <div class="card card-signup">
                             <form class="form">
                                 <div class="header header-primary text-center">
-                                    <h4>Signup</h4>
+                                    <h4>Login</h4>
                                 </div>
-                                <div class="content">
+				<div class="content">
                                     <div class="input-group">
                                         <span class="input-group-addon">
 											<i class="material-icons">face</i>
 										</span>
                                         <div class="form-group is-empty"><input required="true" id="username" autofocus="" type="text" class="form-control" placeholder="Username..."><span class="material-input"></span></div>
                                     </div>
-                                    <div class="input-group">
-										<span class="input-group-addon">
-											<i class="material-icons">email</i>
-										</span>
-										<div class="form-group is-empty"><input required="true" id="email" type="text" class="form-control" placeholder="Email..."><span class="material-input"></span></div>
-									</div>
+                                    
                                     <div class="input-group">
                                         <span class="input-group-addon">
 											<i class="material-icons">lock_outline</i>
 										</span>
-                                        <div class="form-group is-empty"><input required="true" id="password" min="8" type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
+                                        <div class="form-group is-empty"><input required="true" id="password" type="password" placeholder="Password..." class="form-control"><span class="material-input"></span></div>
                                     </div>
                                 </div>
-                                <div class="footer text-center">
-                                   <input type="submit" id="signup_form" value="get started" class=" btn btn-primary">
-				                                
-				</form>
-		                  <a href="login.html">
+				<div class="footer text-center">
+                                <button id="login_form" class=" btn btn-primary ">get back in</button>
+		                    <a href="index.html">
 					<div class="text-center btn btn-primary">
-		                           or login 
-		                  	</div></a>
-                                </div>                   
+		                        or signup
+				    </div></a> 	
+		                 </div>
+				</form>
                         </div>
                     </div>
                 </div>

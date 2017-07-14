@@ -1,0 +1,139 @@
+html {
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 250px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (min-width: 680px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 860px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 992px) {}
+
+h1 {
+    font-size: 3.1rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    line-height: 2rem;
+}
+
+.back-img {
+    background-image: url('assets/img/robot.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: block;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    height: 800px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.stroke {
+    color: black;
+    text-shadow:
+    /*-1px -1px 0 #000,
+    1px -1px 0 #000,*/
+    -1px 1px 0 #fff,
+    1px 1px 0 #fff; 
+}
+
+.heading {
+    font-family: 'Nova Mono', monospace;
+}
+
+.main-topic {
+    font-size: 2.4rem;
+    padding: 2rem;
+}
+
+.navbar.nav-white {
+    background-color: white;
+    color: black;
+}
+
+.navbar-nav>.active {
+    background-color: #55007F;
+    border-radius: 4px;
+    color: #FFFFFF;
+    box-shadow: 0 16px 26px -10px rgba(156, 39, 176, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(156, 39, 176, 0.2);
+}
+
+.signup-page .wrapper .card-signup {
+    margin: 80px 0 20px;
+}
+
+a {
+    color: black;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#logout {
+    cursor: pointer;
+}
+
+.details {
+    font-size: 2.6rem;
+    cursor: help;
+}
+
+.container>.card {
+    margin-bottom: 1rem;
+    padding: 0.4rem;
+}
+
+.thumb_up,
+.thumb_down,
+.votes {
+   /* cursor: pointer;*/
+    vertical-align: middle;
+    font-size: 3.3rem;
+    
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
