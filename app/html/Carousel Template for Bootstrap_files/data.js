@@ -60,7 +60,7 @@ $("[id^=td-]").on('click', function () {
     }
     $.ajax({
         method: 'POST',
-        //url: 'http://data.priyesh18.hasura.me/v1/query',
+        //url: 'http://data.vivekjib.hasura.me/v1/query',
         url: data_url + '/v1/query',
         xhrFields: {
             withCredentials: true
@@ -144,7 +144,7 @@ function delete_vote(rurl) {
         }
         $.ajax({
             method: 'POST',
-            //url: 'http://data.priyesh18.hasura.me/v1/query',
+            //url: 'http://data.vivekjib.hasura.me/v1/query',
             url: data_url + '/v1/query',
             xhrFields: {
                 withCredentials: true

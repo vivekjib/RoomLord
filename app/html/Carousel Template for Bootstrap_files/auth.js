@@ -156,10 +156,16 @@ $('#logout').on('click touchstart', function () {
         toastr.options = {
             "closeButton": true,
         }
-        window.location = "/";
+        window.location = "../";
     }).fail(function (error) {
         $('#logout').attr("disabled", false);
-        console.log(error);
+	var mes = (JSON.parse(error.responseText).message).toString();
+        toastr["error"](mes)
+        toastr.options = {
+            "closeButton": true,
+        }        
+	console.log(error);
+	//alert(JSON.parse(error.responseText).message);
     })
 })
 
