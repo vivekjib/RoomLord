@@ -10,9 +10,8 @@ $(window).bind("load", function() {
         }
     }).done(function (data) {
 	console.log(data);
-	obj = JSON.parse(data);
-	document.getElementById("username").textContent=obj.username; 
-	document.getElementById("email").textContent=obj.email;   
+	document.getElementById("username").textContent= data.username; 
+	document.getElementById("email").textContent= data.email;   
     }).fail(function(error){
 	console.log(error);
     });
