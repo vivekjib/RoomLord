@@ -1,3 +1,23 @@
+$(window).bind("load", function() { 
+    $.ajax({
+	method: 'GET',
+	url: auth_url + '/user/account/info',
+	xhrFields: {
+            withCredentials: true
+        },
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }).done(function (data) {
+	console.log(data);
+	obj = JSON.parse(data);
+	document.getElementById("username").textContent=obj.username; 
+	document.getElementById("email").textContent=obj.email;   
+    }).fail(function(error){
+	console.log(error);
+    });
+});
+
 //upvote
 $("[id^=tu-]").on('click', function () {
     var str = $(this).attr("id");

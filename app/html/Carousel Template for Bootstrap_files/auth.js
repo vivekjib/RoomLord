@@ -1,10 +1,10 @@
 $('[data-toggle="tooltip"]').tooltip();
 
 //Auth
-//var auth_url = "http://auth.c100.hasura.me";
-//var data_url = "http://data.c100.hasura.me";
-var auth_url = "http://auth.vivekjib.hasura.me";
-var data_url = "http://data.vivekjib.hasura.me";
+var auth_url = "http://auth.c100.hasura.me";
+var data_url = "http://data.c100.hasura.me";
+//var auth_url = "http://auth.vivekjib.hasura.me";
+//var data_url = "http://data.vivekjib.hasura.me";
 (Cookies.get('id') == undefined) ? $('#out').css("display", "none"): $('#out').css("display", "block");
 (Cookies.get('id') == undefined) ? $('#in').css("display", "block"): $('#in').css("display", "none");
 
@@ -98,7 +98,7 @@ $('#signup_form').on('click touchstart', function () {
                     'name': $usern.val(),
                     'user_id': user_id,
 		    'email' : $email.val()
-                        }]
+                }]
             }
         };
         $.ajax({
@@ -113,10 +113,11 @@ $('#signup_form').on('click touchstart', function () {
             },
             data: JSON.stringify($profile)
         }).done(function (data) {
-            //console.log(data);
+            console.log(data);
+	    //alert(JSON.parse(data.responseText).message);
+	    console.log("Inside inser done");
 
-
-            window.location = "login.html";
+            window.location = "../after-login/index.html";
         }).fail(function (error) {
             $('#signup_form').attr("disabled", false);
             console.log(error);
