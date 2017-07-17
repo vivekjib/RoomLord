@@ -11,6 +11,7 @@ $(window).bind("load", function() {
     }).done(function (data) {
 	console.log(data);
 	document.getElementById("username").textContent= data.username; 
+	document.getElementById("username1").textContent= data.username; 
 	document.getElementById("email").textContent= data.email;   
     }).fail(function(error){
 	console.log(error);
