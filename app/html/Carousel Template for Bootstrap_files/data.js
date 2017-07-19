@@ -12,11 +12,11 @@ $(window).bind("load", function() {
         }
     }).done(function (data) {
 	//console.log(data);
-	document.getElementById("username").textContent= data.username; 
-	document.getElementById("username1").textContent= data.username; 
-	document.getElementById("email").textContent= data.email;   
+			document.getElementById("username").textContent= data.username; 
+			document.getElementById("username1").textContent= data.username; 
+			document.getElementById("email").textContent= data.email;   
     }).fail(function(error){
-	console.log(error);
+			console.log(error);
     });
 });
 
@@ -54,7 +54,7 @@ $('#search-button').on('click', function() {
 		  $('#roomAddressTable').bootstrapTable("load", data);
     }).fail(function (error) {
         console.log(error);
-        alert(JSON.parse(error.responseText).error);
+        //alert(JSON.parse(error.responseText).error);
     })
 });
 

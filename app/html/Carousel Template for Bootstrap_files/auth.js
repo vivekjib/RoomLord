@@ -91,13 +91,13 @@ $('#signup_form').on('click touchstart', function () {
             expires: 7
         });
         var $profile = {
-            type: 'insert',
-            args: {
-                table: 'profile',
-                objects: [{
+            "type": 'insert',
+            "args": {
+                "table": 'profile',
+                "objects": [{
                     'name': $usern.val(),
                     'user_id': user_id,
-		    'email' : $email.val()
+		    			  'email' : $email.val()
                 }]
             }
         };
@@ -171,49 +171,3 @@ $('#logout').on('click touchstart', function () {
     })
 })
 
-
-//Insert a new resource into the table by the user
-$('#add_resource').on('click', function () {
-    $(this).attr("disabled", true);
-    var certificate = ($('[name="cert"]:checked').val() == 1) ? true : false;
-    var price = ($('[name="paid"]:checked').val() == 1) ? true : false;
-
-    var $info = {
-        type: 'insert',
-        args: {
-            table: 'resource',
-            objects: [{
-                resource_url: $('[name="r_url"]').val(),
-                name: $('[name="name"]').val(),
-                topic: $('[name="topic"]').val(),
-                user_id: Cookies.get('id'),
-                type: $('[name="type"]:checked').val(),
-                certificate: certificate,
-                cost: price,
-                description: $('[name="desc"]').val(),
-                }]
-        }
-    }
-    //console.log(JSON.stringify($info));
-    $.ajax({
-        method: 'POST',
-        url: data_url + '/v1/query',
-        xhrFields: {
-            withCredentials: true
-        },
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        data: JSON.stringify($info)
-    }).done(function (data) {
-        console.log(data);
-
-
-        window.location = "/";
-        
-    }).fail(function (error) {
-        $('#signup_form').attr("disabled", false);
-        console.log(error);
-        alert(JSON.parse(error.responseText).error);
-    })
-})
