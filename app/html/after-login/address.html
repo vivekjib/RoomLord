@@ -13,8 +13,10 @@
     <link href="../Carousel Template for Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="../Carousel Template for Bootstrap_files/carousel.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css" integrity="sha256-eU4xmpfQx1HSi5q1q2rHNcMEzTNJov7r2Wr/6zF3ANc=" crossorigin="anonymous" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="../Carousel Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -26,10 +28,6 @@
           <div class="container">
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="index.html">
                 <b>RoomLord</b>
@@ -89,24 +87,26 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>Owner </td><td>Owner name</td>
+                    <td>Owner</td><td id="ownerName">Owner name</td>
                 </tr>
                 <tr>
-                    <td>Rent</td><td>Rent in Rs</td>
+                    <td>Rent</td><td id="rent">Rent in Rs</td>
                 </tr>
                 <tr>
-                    <td>No. of rooms available</td><td>1</td>
+                    <td>No. of rooms available</td id="nRooms"><td>1</td>
                 </tr>
                 <tr>
-                    <td>Owner Phone No.</td><td>8888888889</td>
+                    <td>Owner Phone No.</td><td id="phoneNo">8888888889</td>
                 </tr>
                 <tr>
-                    <td>Email ID</td><td>asdfg@email.com</td>
+                    <td>Email ID</td><td id="emailOwner">asdfg@email.com</td>
                 </tr>
                 <tr>
-                    <td>Owner reply time</td><td>10AM-8PM</td>
+                    <td>Owner reply time</td><td id="replyTime">10AM-8PM</td>
                 </tr>
-                
+					 <tr>
+                    <td>Address</td><td id="address">Address of room</td>
+                </tr>
             </tbody>
         </table>
         
@@ -149,7 +149,7 @@
     <script src="../Carousel Template for Bootstrap_files/js.cookie.js"></script>
     <!-- tostr files -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js" integrity="sha256-eXHLyyVI+v6X1wbfg9NB05IWqOqY4E9185nHZgeDIhg=" crossorigin="anonymous"></script>
     <script src="../Carousel Template for Bootstrap_files/auth.js"></script>
     <script src="../Carousel Template for Bootstrap_files/data.js"></script>
   
