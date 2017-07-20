@@ -34,7 +34,7 @@ $('#search-button').on('click', function() {
 		    "table": "room",
 		    "columns": ["id","address"],
 		    "where": {"$and" : searchWhereClause }
-  		}
+		}
     }
     $.ajax({
 	method:'POST',
@@ -48,7 +48,7 @@ $('#search-button').on('click', function() {
         data: JSON.stringify($searchQ)
     }).done(function (data) {
         console.log(data);
-        toastr["success"]("Query is success")
+        toastr["success"]("Brought results for you")
             toastr.options = {
                 "closeButton": true,} 
 		  $('#roomAddressTable').bootstrapTable("load", data);
@@ -58,4 +58,13 @@ $('#search-button').on('click', function() {
     })
 });
 
+function commonFormatter(value, row, index) {
+	return '<div data-idx="' + index + '">' + value + '</div>';
+}
 
+window.commonEvents = {
+	'click div': function (e) {
+        //alert('You click field: ' + $(e.target).attr('data-idx'));
+		  window.location.href= "address.html";
+    }
+}
