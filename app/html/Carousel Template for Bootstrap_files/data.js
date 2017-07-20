@@ -63,8 +63,9 @@ function commonFormatter(value, row, index) {
 }
 
 window.commonEvents = {
-	'click div': function (e) {
-        //alert('You click field: ' + $(e.target).attr('data-idx'));
-		  window.location.href= "address.html";
+	'click div': function (e, value) {
+          window.location= 'address.html';
+		  console.log(value);
+	  	  sessionStorage.address = value;
     }
 }

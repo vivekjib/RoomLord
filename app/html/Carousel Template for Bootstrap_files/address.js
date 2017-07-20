@@ -1,4 +1,5 @@
 //Setting user panel
+var address = sessionStorage.address;
 $(window).bind("load", function() { 
     $.ajax({
 	method: 'GET',
@@ -20,15 +21,13 @@ $(window).bind("load", function() {
 });
 	 
 $(window).bind("load", function() { 
-	 var id = Math.floor((Math.random() * 10) + 1);
 	 var addressId = {
-			 "type" : "execute_query_template",
-    		 "args" : {
-        			"name" : "room",
-        			"args" : {
-            		"id" : id
-        		   }
-    		}
+			 "type": "select",
+	 	  	 "args": {
+		    	 "table": "room",
+		    	 "columns": ["*"],
+		    	 "where": {"address" : address }
+		}
   	 }
 	 $.ajax({
 		method:'POST',
