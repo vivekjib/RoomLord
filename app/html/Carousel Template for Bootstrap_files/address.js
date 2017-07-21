@@ -1,5 +1,5 @@
 //Setting user panel
-var address = sessionStorage.address;
+var address;// = sessionStorage.address;
 $(window).bind("load", function() { 
     $.ajax({
 	method: 'GET',
@@ -21,6 +21,24 @@ $(window).bind("load", function() {
 });
 	 
 $(window).bind("load", function() { 
+	$(function($){
+	        var addToAll = true;
+	        var gallery = true;
+	        var titlePosition = 'inside';
+	        $(addToAll ? 'img' : 'img.fancybox').each(function(){
+	            var $this = $(this);
+	            var title = $this.attr('title');
+	            var src = $this.attr('data-big') || $this.attr('src');
+	            var a = $('<a href="#" class="fancybox"></a>').attr('href', src).attr('title', title);
+	            $this.wrap(a);
+	        });
+	        if (gallery)
+	            $('a.fancybox').attr('rel', 'fancyboxgallery');
+	        $('a.fancybox').fancybox({
+	            titlePosition: titlePosition
+	        });
+	 });
+	 $.noConflict();
 	 var addressId = {
 			 "type": "select",
 	 	  	 "args": {
@@ -56,3 +74,4 @@ $(window).bind("load", function() {
         //alert(JSON.parse(error.responseText).error);
     })
 });
+
