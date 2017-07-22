@@ -1,5 +1,7 @@
 //Setting user panel
-var address = sessionStorage.address;
+var address;// = sessionStorage.address;
+var relImgContainer = document.getElementById("relatedImages");
+relImgContainer.style.display = 'none';
 $(window).bind("load", function() { 
     $.ajax({
 	method: 'GET',
@@ -85,6 +87,7 @@ $(window).bind("load", function() {
     			document.getElementById("myImgSrc4").href = data[3].images;
     			document.getElementById("myImgSrc5").href = data[4].images;
     			document.getElementById("myImgSrc6").href = data[5].images;
+    			relImgContainer.style.display = 'block';
     		}).fail(function (error) {
     			console.log(error);
     		});
