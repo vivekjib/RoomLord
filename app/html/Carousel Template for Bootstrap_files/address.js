@@ -1,5 +1,5 @@
 //Setting user panel
-var address;// = sessionStorage.address;
+var address = sessionStorage.address;
 $(window).bind("load", function() { 
     $.ajax({
 	method: 'GET',
