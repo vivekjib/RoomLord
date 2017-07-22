@@ -50,7 +50,7 @@ $(window).bind("load", function() {
     			"args": {
     				"table": "images",
     				"columns": ["*"],
-    				"where": {"id": data[2].id}
+    				"where": {"id": data[0].id}
     			}
     		}
     		$.ajax({
