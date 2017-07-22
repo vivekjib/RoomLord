@@ -1,5 +1,5 @@
 //Setting user panel
-var address;// = sessionStorage.address;
+var address = sessionStorage.address;
 var relImgContainer = document.getElementById("relatedImages");
 relImgContainer.style.display = 'none';
 $(window).bind("load", function() { 
