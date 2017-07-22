@@ -50,9 +50,12 @@ $(window).bind("load", function() {
     			"args": {
     				"table": "images",
     				"columns": ["*"],
-    				"where": {"id": data[0].id}
+    				"where": {"id": {
+    					"$eq":data[0].id
+    				}
     			}
     		}
+    		console.log(imageQuery);
     		$.ajax({
     			method: 'POST',
     			url: data_url + '/v1/query',
