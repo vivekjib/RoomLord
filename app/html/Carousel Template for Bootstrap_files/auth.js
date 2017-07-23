@@ -90,7 +90,7 @@ $('#signup_form').on('click touchstart', function () {
         Cookies.set('id', user_id, {
             expires: 7
         });
-        var $profile = {
+        var profile = {
             "type": 'insert',
             "args": {
                 "table": 'profile',
@@ -100,7 +100,7 @@ $('#signup_form').on('click touchstart', function () {
 		    			  'email' : $email.val()
                 }]
             }
-        };
+        }
         $.ajax({
             method: 'POST',
 
@@ -111,11 +111,11 @@ $('#signup_form').on('click touchstart', function () {
             headers: {
                 'Content-Type': 'application/json'
             },
-            data: JSON.stringify($profile)
+            data: JSON.stringify(profile)
         }).done(function (data) {
             console.log(data);
 	    //alert(JSON.parse(data.responseText).message);
-	    console.log("Inside inser done");
+	    console.log("Inside insert done");
 
             window.location = "../after-login/index.html";
         }).fail(function (error) {
