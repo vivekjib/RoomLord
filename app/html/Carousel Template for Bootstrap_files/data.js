@@ -48,7 +48,7 @@ $('#search-button').on('click', function() {
         data: JSON.stringify($searchQ)
     }).done(function (data) {
         console.log(data);
-        toastr["success"]("Brought results for you")
+        toastr["success"]("Brought results, Click to get more details.")
             toastr.options = {
                 "closeButton": true,} 
 		  $('#roomAddressTable').bootstrapTable("load", data);
