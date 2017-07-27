@@ -1,5 +1,5 @@
 var express = require('express');
-var compression = require('compression');
+//var compression = require('compression');
 var app = express();
 var root = process.cwd();
 //var favicon = require('serve-favicon');
@@ -19,8 +19,8 @@ app.get('/signup', function (req, res) {
     res.sendFile('html/login/index.html', {root});
 });
 */
-app.use(compression());
-//app.set('env', 'production');
+//app.use(compression());
+app.set('env', 'production');
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
