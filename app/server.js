@@ -20,7 +20,7 @@ app.get('/signup', function (req, res) {
 });
 */
 app.use(compression());
-app.set('env', 'production');
+//app.set('env', 'production');
 app.listen(8080, function () {
   console.log('Example app listening on port 8080!');
 });
