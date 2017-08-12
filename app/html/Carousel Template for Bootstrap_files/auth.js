@@ -97,7 +97,7 @@ $('#signup_form').on('click touchstart', function () {
                 "objects": [{
                     'name': $usern.val(),
                     'user_id': user_id,
-		    			  'email' : $email.val()
+		    		'email' : $email.val()
                 }]
             }
         }
